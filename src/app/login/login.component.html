@@ -7,12 +7,12 @@
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </head>
 <body>
-<h1 style="text-align:center">
+<!-- <h1 style="text-align:center">
     Angular Login Example
-  </h1>
+  </h1> -->
   <div class="login">
     <h2 class="login-header">Log in</h2>
-    <form [formGroup]="loginForm" class="login-container" (ngSubmit)="login()">
+    <form [formGroup]="loginForm" class="login-container" (ngSubmit)="login()" method="POST">
   
       <p [ngClass]="{ 'has-error': isSubmitted && formControls.email.errors }">
         <input type="email" placeholder="Email" formControlName="email">
@@ -34,15 +34,21 @@
         <input type="submit" value="Log in">
       </p>
       <div align="center">
-          <b>Not a member ? <nav><a routerLink="abc">Sign Up</a></nav></b>
+          <b>Not a member ? <nav><a routerLink="abc" id='login'>Sign Up</a></nav></b>
 
       </div>
     </form>
-
-  
+    <!-- <div *ngIf="page">
+    <app-shelf [id]=id></app-shelf>
+    
+  </div> -->
     
     
   </div>
+  <!-- <main [@slideInOut]="o.isActivated ? o.activatedRoute : ''">
+      <router-outlet #o="outlet"></router-outlet>
+    </main> -->
+  
   
 </body>
 </html>

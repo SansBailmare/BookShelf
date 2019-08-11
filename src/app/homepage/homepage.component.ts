@@ -10,7 +10,9 @@ import { slideInOut } from '../animations';
 export class HomepageComponent implements OnInit {
 
   constructor() { }
-
+  visible(){
+    document.getElementById('deck').className="notvisible";
+  }
   ngOnInit() {
   }
 

@@ -1,9 +1,12 @@
 
-
+body{
+  background-color:rgba(0,0,0,0);
+}
 .login {
   width: 400px;
   margin: 16px auto;
   font-size: 16px;
+  background-color:rgba(0,0,0,0);
 }
 
 /* Reset top and bottom margins from certain elements */
@@ -11,6 +14,7 @@
 .login p {
   margin-top: 0;
   margin-bottom: 0;
+
 }
 
 /* The triangle form is achieved by a CSS hack */
@@ -23,7 +27,7 @@
 }
 
 .login-header {
-  background: #28d;
+  background-color:rgba(0,0,0,0.6);
   padding: 20px;
   font-size: 1.4em;
   font-weight: normal;
@@ -68,14 +72,13 @@
 }
 
 .login input[type="submit"] {
-  background: #28d;
-  border-color: transparent;
-  color: #fff;
+  background: rgba(0, 0, 0,0.8);
+  color: white;
   cursor: pointer;
 }
 
 .login input[type="submit"]:hover {
-  background: #17c;
+  background: rgb(75, 143, 48);
 }
 
 /* Buttons' focus effect */
@@ -87,4 +90,7 @@
 .has-error input[type="password"] {
     border-color: rgb(216, 12, 12);
     color: rgb(230, 14, 14);
+}
+#login{
+  color: rgb(75, 143, 48);
 }

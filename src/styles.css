@@ -1,10 +1,10 @@
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 
-body{
-    background: url(./assets/image.jfif);
+/* body{
+    background-color: rgba(0,0,0,0);
     background-size:100% 
-}
+} */
 router-outlet ~ *{
     position : absolute;
     height: 100%;

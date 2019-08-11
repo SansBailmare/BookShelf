@@ -7,18 +7,19 @@ import { RegisterComponent } from './register/register.component';
 import { ShelfComponent } from './shelf/shelf.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { RegistertrialComponent } from './registertrial/registertrial.component'
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'homepage'},
-  {
-    path : 'shelf', component : ShelfComponent
-  },
+    { path: '', pathMatch: 'full', redirectTo: 'homepage'},
   
+    {
+      path : 'shelf', component : ShelfComponent,canActivate: [AuthGuard]
+    },
   
   { path: 'admin', component: AdminComponent, canActivate: [AuthGuard] },
   
-  {
-    path: 'homepage', component:HomepageComponent,children:[
+   {
+     path: 'homepage', component:HomepageComponent,children:[
       {path: 'AboutUs', component:AboutusComponent},
 
     {path: 'Login', component: LoginComponent},
@@ -27,8 +28,8 @@ const routes: Routes = [
   { path: 'Login/abc', redirectTo: 'register'},
   { path: 'register/log', redirectTo: 'Login'},
   
-  ]
-  },
+   ]
+   },
   
  
 

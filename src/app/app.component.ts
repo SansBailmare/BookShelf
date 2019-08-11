@@ -9,4 +9,11 @@ import { slideInOut } from './animations';
 })
 export class AppComponent {
   title = 'books';
+  visible(){
+    document.getElementById('deck').className="notvisible";
+  }
 }
+
+
+
+ 

@@ -7,34 +7,43 @@
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </head>
 <body>
-<h1 style="text-align:center">
+<!-- <h1 style="text-align:center">
     Angular Login Example
-  </h1>
+  </h1> -->
   <div class="login">
     <h2 class="login-header">Register</h2>
-    <form [formGroup]="loginForm" class="login-container" (ngSubmit)="login()">
+    <form [formGroup]="registerForm" class="login-container" (ngSubmit)="register()">
   
       <p [ngClass]="{ 'has-error': isSubmitted && formControls.email.errors }">
         <input type="email" placeholder="Email" formControlName="email">
       </p>
   
-      <div *ngIf="isSubmitted && formControls.email.errors" class="help-block">
+      <!-- <div *ngIf="isSubmitted && formControls.email.errors" class="help-block">
         <div *ngIf="formControls.email.errors.required">Email is required</div>
-      </div>
-  
+      </div> -->
+      <control-messages [control]="registerForm.controls.email"></control-messages>
+      
+
+      <p [ngClass]="{ 'has-error': isSubmitted && formControls.name.errors }">
+        <input type="text" placeholder="Name" formControlName="name">
+      </p>
+      <control-messages [control]="registerForm.controls.name"></control-messages>
+
+
       <p [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors }">
         <input type="password" placeholder="Password" formControlName="password">
       </p>
   
-      <div *ngIf="isSubmitted && formControls.password.errors" class="help-block">
+      <!-- <div *ngIf="isSubmitted && formControls.password.errors" class="help-block">
         <div *ngIf="formControls.password.errors.required">Password is required</div>
-      </div>
+      </div> -->
+      <control-messages [control]="registerForm.controls.password"></control-messages>
   
       <p>
-        <input type="submit" value="Register">
+        <button type="submit" value="Register" >Register</button>
       </p>
       <div align="center">
-          <b>Aleady a member ? <nav><a routerLink="log">Log In</a></nav></b>
+          <b>Aleady a member ? <nav><a routerLink="log" id='login'>Log In</a></nav></b>
           <!-- <router-outlet></router-outlet> -->
       </div>
       <!-- <div>

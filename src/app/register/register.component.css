@@ -1,9 +1,12 @@
 
-
+body{
+  background-color:rgba(0,0,0,0);
+}
 .login {
     width: 400px;
     margin: 16px auto;
     font-size: 16px;
+    background-color:rgba(0,0,0,0);
   }
   
   /* Reset top and bottom margins from certain elements */
@@ -23,7 +26,7 @@
   }
   
   .login-header {
-    background: #28d;
+    background: rgba(0, 0, 0,0.6);
     padding: 20px;
     font-size: 1.4em;
     font-weight: normal;
@@ -33,7 +36,7 @@
   }
   
   .login-container {
-    background: #ebebeb;
+    background-color: #ebebeb;
     padding: 12px;
   }
   
@@ -42,7 +45,7 @@
     padding: 12px;
   }
   
-  .login input {
+  .login input,button {
     box-sizing: border-box;
     display: block;
     width: 100%;
@@ -52,10 +55,13 @@
     outline: 0;
     font-family: inherit;
     font-size: 0.95em;
+    background: rgba(0, 0, 0,0.8);
+    color: white;
   }
   
   .login input[type="email"],
-  .login input[type="password"] {
+  .login input[type="password"],
+  .login input[type="text"] {
     background: #fff;
     border-color: #bbb;
     color: #555;
@@ -63,28 +69,33 @@
   
   /* Text fields' focus effect */
   .login input[type="email"]:focus,
-  .login input[type="password"]:focus {
+  .login input[type="password"]:focus,
+  .login input[type="text"]:focus{
     border-color: #888;
   }
   
   .login input[type="submit"] {
-    background: #28d;
+    background: black;
     border-color: transparent;
     color: #fff;
     cursor: pointer;
   }
   
-  .login input[type="submit"]:hover {
-    background: #17c;
+  .login button[type="submit"]:hover {
+    background: rgb(75, 143, 48);
   }
   
   /* Buttons' focus effect */
-  .login input[type="submit"]:focus {
-    border-color: #05a;
+  .login button[type="submit"]:focus {
+    border-color:black;
   }
   
   .has-error input[type="email"],
-  .has-error input[type="password"] {
+  .has-error input[type="password"],
+  .has-error input[type="text"] {
       border-color: rgb(216, 12, 12);
       color: rgb(230, 14, 14);
+  }
+  #login{
+    color: rgb(75, 143, 48);
   }

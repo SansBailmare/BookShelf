@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import {MatCardModule,MatButtonModule} from '@angular/material'
 
@@ -13,6 +14,9 @@ import { ShelfComponent } from './shelf/shelf.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HomepageComponent } from './homepage/homepage.component';
+import { ValidationService } from './validation.service';
+import { ControlMessages } from './control-messages/control-messages.component';
+import { RegistertrialComponent } from './registertrial/registertrial.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +27,8 @@ import { HomepageComponent } from './homepage/homepage.component';
     ShelfComponent,
     AboutusComponent,
     HomepageComponent,
+    ControlMessages,
+    RegistertrialComponent,
     
     
   ],
@@ -32,9 +38,10 @@ import { HomepageComponent } from './homepage/homepage.component';
     ReactiveFormsModule,
     AppRoutingModule,MatButtonModule,
     MatCardModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [ ValidationService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
